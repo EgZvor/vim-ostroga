@@ -1,7 +1,10 @@
 function! s:intersperse_with_newlines(lines)
-    let sep = ""
+    if len(a:lines) == 0
+        return []
+    endif
+
     return range(len(a:lines) * 2 - 1)
-        \ ->map({_, val -> (val % 2 == 0 ? a:lines[val / 2] : sep)})
+        \ ->map({_, val -> (val % 2 == 0 ? a:lines[val / 2] : "")})
 endfunction
 
 function! s:mark_as_path(mark_info)
