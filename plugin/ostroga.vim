@@ -6,7 +6,7 @@ endif
 
 let g:loaded_ostroga_plugin = 1
 
-command -nargs=0 OstrogaMark call ostroga#popup_create()
+command -nargs=0 OstrogaJump call ostroga#popup_create()
 
 augroup ostroga_update_global_marks
     au!
