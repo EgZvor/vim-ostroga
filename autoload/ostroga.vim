@@ -26,6 +26,7 @@ function! ostroga#update_global_marks()
     endfor
 endfunction
 
+" TODO: Add fallback for neovim compatible popup
 function! ostroga#popup_create()
     return popup_create(ostroga#ui#marks_to_hints(s:global_alpha_marks()), {
         \ 'filter': function('s:choose_mark'),
